@@ -1,0 +1,777 @@
+<%- include('header') %>
+<style>
+
+/* ======================== */
+/*   Syed Sahar Ali Raza   	*/
+/* ========================	*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700italic,700,900italic,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+
+#generic_price_table{
+	background-color: #2e6ca3;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+}
+#generic_price_table1{
+	background-color: #2e6ca3;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  margin: 2em;
+  /* margin-bottom: 2em; */
+}
+
+/*PRICE COLOR CODE START*/
+#generic_price_table .generic_content{
+	background-color: #fff;
+}
+
+#generic_price_table .generic_content .generic_head_price{
+	background-color: #f6f6f6;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head_bg{
+	border-color: #2e31cc rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #2e31cc;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head span{
+	color: #ffffff;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .sign{
+    color: #414141;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .currency{
+    color: #414141;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .cent{
+    color: #414141;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .month{
+    color: #414141;
+}
+
+
+#generic_price_table .generic_content .generic_feature_list ul li span{
+	color: #414141;
+}
+#generic_price_table .generic_content .generic_feature_list ul li:hover{
+	background-color: #2e31cc;
+	border-left: 5px solid #2e31cc;
+}
+
+#generic_price_table .generic_content .generic_price_btn a{
+	border: 1px solid #2e31cc; 
+    color: #2e31cc;
+} 
+
+#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head_bg,
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg{
+	border-color: #2e31cc rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #2e31cc;
+	color: #2e31cc;
+}
+
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head span,
+#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head span{
+	color: #fff;
+}
+
+#generic_price_table .generic_content:hover .generic_price_btn a,
+#generic_price_table .generic_content.active .generic_price_btn a{
+	background-color: #2e31cc;
+	color: #fff;
+} 
+#generic_price_table{
+	/* margin: 50px 0 50px 0; */
+    font-family: 'Raleway', sans-serif;
+}
+.row .table{
+    padding: 28px 0;
+}
+
+/*PRICE BODY CODE START*/
+
+#generic_price_table .generic_content{
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+
+#generic_price_table .generic_content .generic_head_price {
+	margin: 0 0 20px 0;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content{
+	margin: 0 0 50px 0;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head_bg{
+    border-style: solid;
+    border-width: 90px 1411px 23px 399px;
+	position: absolute;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head{
+	padding-top: 40px;
+	position: relative;
+	z-index: 1;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head span{
+    font-family: "Raleway",sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag{
+	padding: 0 0 20px;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price{
+	display: block;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .sign{
+    display: inline-block;
+    font-family: "Lato",sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .currency{
+    font-family: "Lato",sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 60px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .cent{
+    display: inline-block;
+    font-family: "Lato",sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align: bottom;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .month{
+    font-family: "Lato",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    vertical-align: bottom;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul li{
+	font-family: "Lato",sans-serif;
+	font-size: 18px;
+	padding: 15px 0;
+	transition: all 0.3s ease-in-out 0s;
+}
+#generic_price_table .generic_content .generic_feature_list ul li:hover{
+	transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+
+}
+#generic_price_table .generic_content .generic_feature_list ul li .fa{
+	padding: 0 10px;
+}
+#generic_price_table .generic_content .generic_price_btn{
+	margin: 20px 0 32px;
+}
+
+#generic_price_table .generic_content .generic_price_btn a{
+    border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	-webkit-border-radius: 50px;
+    display: inline-block;
+    font-family: "Lato",sans-serif;
+    font-size: 18px;
+    outline: medium none;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#generic_price_table .generic_content,
+#generic_price_table .generic_content:hover,
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head_bg,
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg,
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head h2,
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head h2,
+#generic_price_table .generic_content .price,
+#generic_price_table .generic_content:hover .price,
+#generic_price_table .generic_content .generic_price_btn a,
+#generic_price_table .generic_content:hover .generic_price_btn a{
+	transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+} 
+@media (max-width: 320px) {	
+}
+
+@media (max-width: 767px) {
+	#generic_price_table .generic_content{
+		margin-bottom:75px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	#generic_price_table .col-md-3{
+		float:left;
+		width:50%;
+	}
+	
+	#generic_price_table .col-md-4{
+		float:left;
+		width:50%;
+	}
+	
+	#generic_price_table .generic_content{
+		margin-bottom:75px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) {
+}
+#generic_price_table_home{
+	 font-family: 'Raleway', sans-serif;
+}
+.text-muted {
+  color: white !important;
+}
+
+.lead {
+    font-size: 1rem !important;
+    font-weight: 300;
+}
+.text-center h1,
+.text-center h1 a{
+	color: #ffffff;
+	font-size: 50px;
+	font-weight: 600;
+	text-decoration: none;
+}
+.demo-pic{
+	margin: 0 auto;
+}
+.demo-pic:hover{
+	opacity: 0.7;
+}
+
+#generic_price_table_home ul{
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	display: table;
+}
+#generic_price_table_home li{
+	float: left;
+}
+#generic_price_table_home li + li{
+	margin-left: 10px;
+	padding-bottom: 10px;
+}
+#generic_price_table_home li a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	font-size: 0px;
+}
+#generic_price_table_home .blue{
+	background: #3498DB;
+	transition: all 0.3s ease-in-out 0s;
+}
+#generic_price_table_home .emerald{
+	background: #2ECC71;
+	transition: all 0.3s ease-in-out 0s;
+}
+#generic_price_table_home .grey{
+	background: #7F8C8D;
+	transition: all 0.3s ease-in-out 0s;
+}
+#generic_price_table_home .midnight{
+	background: #34495E;
+	transition: all 0.3s ease-in-out 0s;
+}
+#generic_price_table_home .orange{
+	background: #E67E22;
+	transition: all 0.3s ease-in-out 0s;
+}
+#generic_price_table1 {
+  color: #fff;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+</style>
+<div id="generic_price_table">
+
+<!-- top1 -->
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Unlock Web3 Security with Our Affordable <br> Pricing Plans</h1>
+    <p class="lead text-muted">Looking for blockchain security solutions under a budget? Look no further! Go through our Audit Packages Designed for the general user or <br> Tell us about your project and get a quote in less than a minute. Let’s work together!</p>
+    <p>
+      <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+    </p>
+  </div>
+</section>
+<!-- top2 -->
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <a href="#" class="btn btn-secondary my-2">ERC20</a>
+    <a href="#" class="btn btn-secondary my-2">BEP20</a>
+    <a href="#" class="btn btn-secondary my-2">DAO</a>
+    <a href="#" class="btn btn-secondary my-2">dApp</a>
+    <a href="#" class="btn btn-secondary my-2">DeFi</a>
+    <a href="#" class="btn btn-secondary my-2">Wallet</a>
+    <a href="#" class="btn btn-secondary my-2">NFT/ERC721</a>
+  </p>
+</div>
+</section>
+
+<!-- top3 -->
+
+<div >   
+  <section>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <!--PRICE HEADING START-->
+                      <div class="price-heading clearfix">
+                          <!-- <h1>Unlock Web3 Security with <br>Our Affordable Pricing Plans</h1> -->
+                      </div>
+                      <!--//PRICE HEADING END-->
+                  </div>
+              </div>
+          </div>
+          <div class="container">
+              
+              <!--BLOCK ROW START-->
+              <div class="row">
+                  <div class="col-md-4">
+                  
+                    <!--PRICE CONTENT START-->
+                      <div class="generic_content clearfix">
+                          
+                          <!--HEAD PRICE DETAIL START-->
+                          <div class="generic_head_price clearfix">
+                          
+                              <!--HEAD CONTENT START-->
+                              <div class="generic_head_content clearfix">
+                              
+                                <!--HEAD START-->
+                                  <div class="head_bg"></div>
+                                  <div class="head">
+                                      <span>Essential</span>
+                                  </div>
+                                  <!--//HEAD END-->
+                                  
+                              </div>
+                              <!--//HEAD CONTENT END-->
+                          </div>                            
+                          <!--//HEAD PRICE DETAIL END-->
+                          
+                          <!--FEATURE LIST START-->
+                          <div class="generic_feature_list">
+                            <ul>
+                                <p>
+                                  For the budget audits, we offer more than just audits with our packages
+                                </p>
+                                <!--BUTTON START-->
+                          <div class="generic_price_btn clearfix">
+                            <a class="" href="">Request Essential Audit</a>
+                          </div>
+                          <!--//BUTTON END-->
+                                  <li>Manual Analysis of upto 1000 LoC*</li>
+                                  <li>Detailed Audit Report</li>
+                                  <li>Audit Certificate NFT</li>
+                                  <li>Announcement on all our social channels</li>
+                                  <li>Audit by 1 experienced auditor</li>
+                                  <li>2 comprehensive reports (Preliminary + Final)</li>
+                                  <li>2 comprehensive reviews</li>
+                                  <li>2 Stage Audit Process</li>
+                              </ul>
+                          </div>
+                          <!--//FEATURE LIST END-->
+                          
+                          
+                          
+                      </div>
+                      <!--//PRICE CONTENT END-->
+                          
+                  </div>
+                  
+                  <div class="col-md-4">
+                  
+                    <!--PRICE CONTENT START-->
+                      <div class="generic_content active clearfix">
+                          
+                          <!--HEAD PRICE DETAIL START-->
+                          <div class="generic_head_price clearfix">
+                          
+                              <!--HEAD CONTENT START-->
+                              <div class="generic_head_content clearfix">
+                              
+                                <!--HEAD START-->
+                                  <div class="head_bg"></div>
+                                  <div class="head">
+                                      <span>Standard</span>
+                                  </div>
+                                  <!--//HEAD END-->
+                                  
+                              </div>
+                              <!--//HEAD CONTENT END-->
+                          </div>                            
+                          <!--//HEAD PRICE DETAIL END-->
+                          
+                          <!--FEATURE LIST START-->
+                          <div class="generic_feature_list">
+                            <ul>
+                              <p>This is for you if you wish to establish yourself in the industry along with an audit</p>
+                                    <!--BUTTON START-->
+                                <div class="generic_price_btn clearfix">
+                                  <a class="" href="">Request Standard Audit</a>
+                                </div>
+                                <!--//BUTTON END-->
+                                <li>Manual Analysis of upto 1000 LoC*</li>
+                                  <li>Detailed Audit Report</li>
+                                  <li>Audit Certificate NFT</li>
+                                  <li>Announcement on all our social channels</li>
+                                  <li>Audit by 2 experienced auditors</li>
+                                  <li>2 comprehensive reports (Preliminary + Final)</li>
+                                  <li>2 comprehensive reviews</li>
+                                  <li>3-Stage Comprehensive Audit Process</li>
+                                  <li>10% discount on future audits</li>
+                                  <li>Report publishing on our GitHub</li>
+                                  <li>Listing your Project on our Audit leaderboard</li>
+                                  <li>Listing on CoinMarketCap & CoinGecko</li>
+                                  <li>Access to our comprehensive ecosystem for funding, marketing, integrations, and ICO/IDO support.</li>
+                                  <li>Post Audit AMA from our side</li>
+                                  <li>1 PR Article on Web3/Crypto based websites</li>
+                              </ul>
+                          </div>
+                          <!--//FEATURE LIST END-->
+                          
+                          
+                          
+                      </div>
+                      <!--//PRICE CONTENT END-->
+                          
+                  </div>
+                  <div class="col-md-4">
+                  
+                    <!--PRICE CONTENT START-->
+                      <div class="generic_content clearfix">
+                          
+                          <!--HEAD PRICE DETAIL START-->
+                          <div class="generic_head_price clearfix">
+                          
+                              <!--HEAD CONTENT START-->
+                              <div class="generic_head_content clearfix">
+                              
+                                <!--HEAD START-->
+                                  <div class="head_bg"></div>
+                                  <div class="head">
+                                      <span>Premium</span>
+                                  </div>
+                                  <!--//HEAD END-->
+                                  
+                              </div>
+                          </div>                            
+                          <!--//HEAD PRICE DETAIL END-->
+                          
+                          <!--FEATURE LIST START-->
+                          <div class="generic_feature_list">
+                            <ul>
+                              <p>Get the security along with the name and fame in the industry across various platforms</p>
+                                      <!--BUTTON START-->
+                                  <div class="generic_price_btn clearfix">
+                                    <a class="" href="">Request Premium Audit</a>
+                                  </div>
+                                  <!--//BUTTON END-->
+                                <li>Manual Analysis of upto 2000 LoC*</li>
+                                  <li>Detailed Audit Report</li>
+                                  <li>Audit Certificate NFT</li>
+                                  <li>Announcement on all our social channels</li>
+                                  <li>Audit by 3 experienced auditors</li>
+                                  <li>2 comprehensive reports (Preliminary + Final)</li>
+                                  <li>2 comprehensive reviews</li>
+                                  <li>4 Stage Comprehensive Audit Process</li>
+                                  <li>15% discount on future audits</li>
+                                  <li>Report publishing on our GitHub</li>
+                                  <li>Listing your Project on our Audit leaderboard</li>
+                                  <li>Listing on CoinMarketCap & CoinGecko</li>
+                                  <li>Access to our comprehensive ecosystem for funding, marketing, integrations, and ICO/IDO support.</li>
+                                  <li>Post Audit AMA from our side</li>
+                                  <li>1 PR Article on Web3/Crypto based websites</li>
+                                  <li>2 Guest posts on Crypto based platforms 1 Telegram post</li>
+                                  <li>Display ads on top crypto-based websites for 1 week</li>
+                                  <li>Help in providing a Listing For your token</li>
+                              </ul>
+                              
+                          </div>
+                          <!--//FEATURE LIST END-->
+                          
+                          
+                          
+                      </div>
+                      <!--//PRICE CONTENT END-->
+                          
+                  </div>
+              </div>	
+              <!--//BLOCK ROW END-->
+              <p style="text-align: right;
+                margin-top: 32px;
+                margin-bottom: 1rem;
+                color: white;
+            ">* Total LoC here indicates Standard Lines + Non Standard Lines</p>
+          </div>
+      </section>             
+  </div>
+
+
+</div>
+
+<!-- top4 -->
+
+<section id="generic_price_table1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Streamline Your Project Planning with Accurate Pricing.</h2>
+        <br>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </div>
+      <div class="col-md-6">
+        <div class="generic_feature_list1">
+          <ul>
+                <li>Get Instant Quote: Quick and easy cost estimate.</li>
+                <li>Plan Ahead with Confidence: Certainty in project planning.</li>
+                <li>Comprehensive Services: Full suite of Web3 security offerings.</li>
+                <li>Expert Support: Dedicated team of experts for your Web3 project’s success.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- top5 -->
+<section id="generic_price_table1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Evolve Beyond Client Status. Maximise Benefits as a Partner.</h2>
+        <br>
+        <p>Elevate your Web3 security experience with our partnership program. Benefit from a tailored approach and priority support. Join our growing ecosystem of successful partners & unlock the full potential of your business.</p>
+        <a href="#" class="btn btn-secondary my-2">Partner Up!</a>
+      </div>
+      <div class="col-md-4">
+        <div class="generic_feature_list1">
+          <img src="/assets/image/banner-image.webp" width="100%" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- top6 -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p>FAQ</p>
+        <h2>Frequently Asked Questions</h2>
+        <br>
+        <p>Visit our FAQs help centre to clear out any doubts or queries you may have regarding us and our services. or reach out to us directly at Telegram.</p>
+        <a href="#" class="btn btn-secondary my-2">Explore FAQs</a>
+      </div>
+      <div class="col-md-8">
+        <div class="generic_feature_list1">
+          <section class="faq-section">
+            <div class="container">
+              <div class="row">
+                                <!-- ***** FAQ Start ***** -->
+                                <div class="col-md-6 offset-md-3">
+                                </div>
+                                <div class="col-md-6 offset-md-3">
+                                    <div class="faq" id="accordion">
+                                        <div class="card">
+                                            <div class="card-header" id="faqHeading-1">
+                                                <div class="mb-0">
+                                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true" data-aria-controls="faqCollapse-1">
+                                                        <span class="badge">1</span>What is a Smart Contract Audit?
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>Smart Contract Audit is a comprehensive process to scrutinise a smart contract’s code that is used to interact with a cryptocurrency or blockchain. This process is carried out to discover errors, issues & security vulnerabilities in the code in order to rectify & fix them. It secures the code from potential future bugs.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="faqHeading-2">
+                                                <div class="mb-0">
+                                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2" data-aria-expanded="false" data-aria-controls="faqCollapse-2">
+                                                        <span class="badge">2</span> Who needs a Smart Contract Audit?
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>Smart Contract Audit is for everyone who is dealing with smart contracts; whether you have an ICO, STO, fintech, Games or any dApp solution based on Smart Contract, you should go for a third-party Audit</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="faqHeading-3">
+                                                <div class="mb-0">
+                                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-3" data-aria-expanded="false" data-aria-controls="faqCollapse-3">
+                                                        <span class="badge">3</span>Why do we use it?
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>The time span of an audit depends on the code size & the complexity of the project. A standard token (ERC20 & other ERC standards) can be audited within a week; on the other hand, complex DeFi projects, Blockchain wallets/dApps may stretch around a couple of weeks to a month.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="faqHeading-4">
+                                                <div class="mb-0">
+                                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-4" data-aria-expanded="false" data-aria-controls="faqCollapse-4">
+                                                        <span class="badge">4</span> What Audit process do we follow?
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div id="faqCollapse-4" class="collapse" aria-labelledby="faqHeading-4" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>We scan for vulnerabilities present in the system by running various test cases. We also conduct manual testing to verify the code for its intended use case. Apart from this, we also leverage in-house & open source security tools as per the smart contract’s framework. Click Here to know more about our comprehensive Audit Process.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="faqHeading-5">
+                                                <div class="mb-0">
+                                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-5" data-aria-expanded="false" data-aria-controls="faqCollapse-5">
+                                                        <span class="badge">5</span> What are the differentiating grounds for automated audit & manual audit?
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div id="faqCollapse-5" class="collapse" aria-labelledby="faqHeading-5" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p> A manual Audit is performed by our in-house team of skilled code auditors to testify to the correct implementations of its specifications. But “To Err Is Human”; hence we also take advantage of various smart contract code testing tools. These tools work on methodical principles of mathematics, hence proving the implementation of contracts based on their specification.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="faqHeading-6">
+                                                <div class="mb-0">
+                                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-6" data-aria-expanded="false" data-aria-controls="faqCollapse-6">
+                                                        <span class="badge">6</span>How much does a smart contract audit cost?
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div id="faqCollapse-6" class="collapse" aria-labelledby="faqHeading-6" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>Our price varies from one smart contract to another. It depends on the complexity of functionalities and the lines of code in the smart-contract. We follow an intensive audit process by keeping the cost minimal to ensure maximum security. Request a free quote or contact our team, and we will get back to you with a feasible timeline and cost.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="faqHeading-7">
+                                                <div class="mb-0">
+                                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7" data-aria-expanded="false" data-aria-controls="faqCollapse-7">
+                                                        <span class="badge">7</span>Which blockchains do we audit?
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div id="faqCollapse-7" class="collapse" aria-labelledby="faqHeading-7" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <p>We audit all major blockchains, which include Ethereum, Binance Smart Chain, Solana, Polygon(MATIC) , Polkadot, and many others.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                          <div class="card-header" id="faqHeading-7">
+                                              <div class="mb-0">
+                                                  <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7" data-aria-expanded="false" data-aria-controls="faqCollapse-7">
+                                                      <span class="badge">7</span>My questions are not answered here; where shall I contact you with a query?
+                                                  </h5>
+                                              </div>
+                                          </div>
+                                          <div id="faqCollapse-7" class="collapse" aria-labelledby="faqHeading-7" data-parent="#accordion">
+                                              <div class="card-body">
+                                                  <p>Please reach out with your queries at hello@quillhash.com or on our Official Telegram Handle</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- top7 -->
+<section id="generic_price_table1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>PROOF OF CAPABILITIES</p>
+        <h2>Why QuillAudits</h2>
+        <br>
+        <p>Elevate your Web3 security experience with our partnership program. Benefit from a tailored approach and priority support. Join our growing ecosystem of successful partners & unlock the full potential of your business.</p>
+        <a href="#" class="btn btn-secondary my-2">Partner Up!</a>
+      </div>
+      <div class="col-md-6">
+        <div class="generic_feature_list1">
+         <p>TESTIMONIALS</p>
+         <h3>What our Clients are saying</h3>
+         <h2>slider lagana he!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('getfree') %>
+
+<!-- top8 -->
+<%- include('web3') %>
+
+<%- include('newsletter') %>
+<%- include('footer') %>

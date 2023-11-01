@@ -1,0 +1,95 @@
+<ul class="nav justify-content-end">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/">HOME
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul>
+            <li><a class="dropdown-item" href="/">Audit Services</a></li>
+            <li><a class="dropdown-item" href="/ethereum-audit">Ethereum Audit</a></li>
+            <li><a class="dropdown-item" href="/dapp-audit">dApp Audit</a></li>
+            <li><a class="dropdown-item" href="/zksync-audit">ZkSync Audit</a></li>
+            <li><a class="dropdown-item" href="/solana-audit">Solana Audit</a></li>
+            <li><a class="dropdown-item" href="/algorand-audit">Algorand Audit</a></li>
+            <li><a class="dropdown-item" href="/hyperledgerfabric-audit">Hyperledger Fabric Audit</a></li>
+            <li><a class="dropdown-item" href="/bsc-audit">BSC Audit</a></li>
+            <li><a class="dropdown-item" href="/wallet-audit"> Wallet Audit</a></li>
+            <li><a class="dropdown-item" href="/starknet-audit">Starknet Audit</a></li>
+            <li><a class="dropdown-item" href="/sui-audit">Sui Audit</a></li>
+            <li><a class="dropdown-item" href="/tezos-audit">Tezos Audit</a></li>
+            <li><a class="dropdown-item" href="/polygon-audit">Polygon Audit</a></li>
+            <li><a class="dropdown-item" href="/l1-audit">L1 Audit</a></li>
+            <li><a class="dropdown-item" href="/polkadot-audit">Polkadot Audit</a></li>
+            <li><a class="dropdown-item" href="/near-audit">NEAR Audit</a></li>
+            <li><a class="dropdown-item" href="/fantom-audit">Fantom Audit</a></li>
+          </ul>
+          <!-- <ul>
+            <li><a class="dropdown-item" href="#">Due Diligence</a></li>
+            <li><a class="dropdown-item" href="#">DeFi Diligence</a></li>
+            <li><a class="dropdown-item" href="#">NFT Diligence</a></li>
+            <li><a class="dropdown-item" href="#">Rug Pull Diligence</a></li>
+          </ul>
+          <ul>
+            <li><a class="dropdown-item" href="#">Enhanced Security</a></li>
+            <li><a class="dropdown-item" href="#">Red Teaming</a></li>
+            <li><a class="dropdown-item" href="#">Security Consultation</a></li>
+            <li><a class="dropdown-item" href="#">Blockchain Forensics</a></li>
+            <li><a class="dropdown-item" href="#">dApp Architecture Consultancy</a></li>
+            <li><a class="dropdown-item" href="#">KYC</a></li>
+          </ul> -->
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/price">Pricing</a>
+      </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/audits">Our Audits</a>
+        </li> -->
+      <li class="nav-item">
+        <!-- <button type="button" class="btn btn-outline-success btn-lg float-right">
+          Open Modal
+        </button> -->
+        <a href="#"  data-toggle="modal" data-target="#exampleModal" class="btn btn-secondary my-2" style="margin-right: 2.5em;">Request An Audit</a>
+      </li>
+    </ul>
+  <!-- navbar -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title" id="exampleModalLabel">SCAS</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form action="/layout" method="post">
+            <div class="form-group">
+                <label for="project">Project/Company name</label>
+                <input type="text" id="project" name="project" class="form-control" placeholder="Project/Company name">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email">
+                <label for="url">Please share your source code</label>
+                <input type="url" id="url" name="url" class="form-control" placeholder="Please share your source code">
+                <label for="message">Additional Notes</label>
+                <textarea name="message" id="message" name="message" style="width: 100%;" placeholder="Any specific details? Have you been audited in the past? Are there certain deadlines?" rows="5"></textarea>
+            </div>
+            <div class="modal-footer">
+              <input type="submit"  class="btn btn-success">
+            <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+          </div>
+        </form>
+    </div>
+    
+  </div>
+</div>
+</div>

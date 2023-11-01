@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+          jsPDF - Create PDFs with HTML5 JavaScript Library
+      </title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src=
+ "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+    <script src=
+ "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+    </script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+ 
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="/admin/dashbord" class="logo">
+				SCAS 
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					
+
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                        <li>
+                            <a class="nav-item1" href="/admin" style="color: black !important;"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+						
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="sidebar">
+				<div class="scrollbar-inner sidebar-wrapper">
+					
+					<ul class="nav">
+						<li class="nav-item active">
+							<a href="/admin/dashbord">
+								<i class="la la-dashboard"></i>
+								<p>Dashboard</p>
+								<!-- <span class="badge badge-count">5</span> -->
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">OutPut</h4>
+						<div class="row">
+							<div class="col-lg-12">
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+	<li class="nav-item" role="presentation">
+		<a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tool 1</a>
+	</li>
+	<li class="nav-item" role="presentation">
+		<a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tool 2</a>
+	</li>
+	<li class="nav-item" role="presentation">
+		<a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tool 3</a>
+	</li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+		<form action="" class="form-horizontal">
+			<div id="divID">
+				<div class="clear" id="cleartab1">
+					<div>
+				 		<div class="form-group">
+							<label class="control-label col-sm-2">Project Name :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="project" value="<%= record.project %>"></input>
+							</div>	
+				 		</div>
+				 		<div class="form-group">
+							<label class="control-label col-sm-2">Your Name :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true" >
+								<input type="text" id="name" value="<%= record.name%>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">Email :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="email" value="<%= record.email %>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">URL :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="url" value="<%= record.url %>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">Message :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="message" value="<%= record.message %>"></input>
+							</div>	
+				 		</div>
+				 	</div>
+				</div>
+			</div>
+		</form>
+					<input type="button" value="Edit" onclick="saveChanges()"></input>
+					<input type="button" value="Clear" onclick="clearPTagById('cleartab1')"></input>
+					<input  type="button" value="Print" onclick="convertHTMLtoPDF()">
+					
+		
+	</div>
+	<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+		<!-- Content for Tab 2 goes here -->
+		<form action="" class="form-horizontal">
+			<div id="divID">
+				<div class="clear" id="cleartab2">
+					<div>
+				 		<div class="form-group">
+							<label class="control-label col-sm-2">Project Name :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="project" value="<%= record.project %>"></input>
+							</div>	
+				 		</div>
+				 		<div class="form-group">
+							<label class="control-label col-sm-2">Your Name :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="name" value="<%= record.name%>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">Email :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="email" value="<%= record.email %>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">URL :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="url" value="<%= record.url %>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">Message :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="message" value="<%= record.message %>"></input>
+							</div>	
+				 		</div>
+				 	</div>
+				</div>
+			</div>
+		</form>
+					<input type="button" value="Edit" onclick="saveChanges2()"></input>
+					<input type="button" value="Clear" onclick="clearPTagById('cleartab2') "></input>
+					<input  type="button" value="Print" onclick="convertHTMLtoPDF1()">
+	</div>
+	<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+		<!-- Content for Tab 3 goes here -->
+		<form action="" class="form-horizontal" id="divID1">
+			<div id="divID">
+				<div class="clear" id="cleartab3">
+					<div>
+				 		<div class="form-group">
+							<label class="control-label col-sm-2">Project Name :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="project" value="<%= record.project %>"></input>
+							</div>	
+				 		</div>
+				 		<div class="form-group">
+							<label class="control-label col-sm-2">Your Name :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="name" value="<%= record.name%>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">Email :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="email" value="<%= record.email %>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">URL :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="url" value="<%= record.url %>"></input>
+							</div>	
+				 		</div>
+						 <div class="form-group">
+							<label class="control-label col-sm-2">Message :-</label>
+							<div class="col-sm-10"  id="editableDiv" contenteditable="true">
+								<input type="text" id="message" value="<%= record.message %>"></input>
+							</div>	
+				 		</div>
+				 	</div>
+				</div>
+			</div>
+		</form>
+					<input type="button" value="Edit" onclick="saveChanges1()"></input>
+					<input type="button" value="Clear" onclick="clearPTagById('cleartab3')"></input>
+					<input  type="button" value="Print" onclick="convertHTMLtoPDF2()">
+		
+		
+		<!-- Add other fields as needed -->
+		
+	</div>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	
+<script>
+	function clearPTagById(id) {
+    var element = document.getElementById(id);
+    if (element) {
+        element.innerHTML = '';
+    } else {
+        console.error("Element with id '" + id + "' not found.");
+    }
+}
+
+
+// PDF
+
+
+
+</script>
+
+<script>
+    function saveChanges() {
+        const editableDiv = document.getElementById('editableDiv');
+        const updatedContent = editableDiv.innerHTML; // Get the updated content
+        // You can handle sending this updated content to the server using AJAX or any other appropriate method.
+        // For this example, let's log the updated content in the console.
+        console.log(updatedContent);
+    }
+	function saveChanges1() {
+        const editableDiv = document.getElementById('editableDiv');
+        const updatedContent = editableDiv.innerHTML; // Get the updated content
+        // You can handle sending this updated content to the server using AJAX or any other appropriate method.
+        // For this example, let's log the updated content in the console.
+        console.log(updatedContent);
+    }
+	function saveChanges2() {
+        const editableDiv = document.getElementById('editableDiv');
+        const updatedContent = editableDiv.innerHTML; // Get the updated content
+        // You can handle sending this updated content to the server using AJAX or any other appropriate method.
+        // For this example, let's log the updated content in the console.
+        console.log(updatedContent);
+    }
+</script>
+ 
+<script type="text/javascript">
+	function convertHTMLtoPDF() {
+		const { jsPDF } = window.jspdf;
+
+		let doc = new jsPDF('l', 'mm', [4000, 4000]);
+		let pdfjs = document.querySelector('#divID');
+
+		doc.html(pdfjs, {
+			callback: function(doc) {
+				doc.save("tool1.pdf");
+			},
+			x: 12,
+			y: 12
+		});                
+	}
+	function convertHTMLtoPDF1() {
+		const { jsPDF } = window.jspdf;
+
+		let doc = new jsPDF('l', 'mm', [4000, 4000]);
+		let pdfjs = document.querySelector('#divID1');
+
+		doc.html(pdfjs, {
+			callback: function(doc) {
+				doc.save("tool2.pdf");
+			},
+			x: 12,
+			y: 12
+		});                
+	}
+	function convertHTMLtoPDF2() {
+		const { jsPDF } = window.jspdf;
+
+		let doc = new jsPDF('l', 'mm', [4000, 4000]);
+		let pdfjs = document.querySelector('#divID2');
+
+		doc.html(pdfjs, {
+			callback: function(doc) {
+				doc.save("tool3.pdf");
+			},
+			x: 12,
+			y: 12
+		});                
+	}            
+</script>        
+</body>
+</html>

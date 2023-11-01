@@ -1,0 +1,107 @@
+<style>
+	/* CSS to set a fixed width and enable word wrapping */
+	.fixed-width {
+		max-width: 100px; /* Set your desired maximum width */
+		word-wrap: break-word;
+	}
+</style>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="/admin/dashbord" class="logo">
+				SCAS 
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+			</div>
+			<nav class="navbar navbar-header navbar-expand-lg">
+				<div class="container-fluid">
+					
+
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                        <li>
+                            <a style="color: black !important; text-decoration: none;" class="nav-item1" href="/admin"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+						
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="sidebar">
+				<div class="scrollbar-inner sidebar-wrapper">
+					
+					<ul class="nav">
+						<li class="nav-item active">
+							<a href="/admin/dashbord">
+								<i class="la la-dashboard"></i>
+								<p>Dashboard</p>
+								<!-- <span class="badge badge-count">5</span> -->
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">Dashboard</h4>
+						<div class="row">
+							<div class="col-lg-12">
+								<table  id="example" class="display" style="width: 100%;">
+									<thead>
+										<tr>
+											<!-- <th>project</th> -->
+											<th>Project</th>
+                							<th>Name</th>
+											<th>S-Code</th>	
+											<th>URL</th>
+											<th>Notes</th>
+											<th >Run Tool</th>
+											<th>View Report</th>
+										</tr>
+									</thead>
+									<tbody>
+										<% x.forEach((y)=>{%>
+										<tr>
+											<td class="fixed-width"><%=y.project%></td>
+											<td class="fixed-width"><%=y.name%></td>
+											<td class="fixed-width"><%=y.email%></td>
+											<td class="fixed-width"><%=y.url%></td>
+											<td class="fixed-width"><%=y.message%></td>
+											<td class="fixed-width"><a style="color: rgb(0, 0, 153) !important;" href="output?id=<%= y._id %>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+											<td class="fixed-width"><a style="color:rgb(0, 0, 153) !important; ;" href="view?id=<%= y._id %>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+										</tr>
+										<%})%>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+<!-- DataTables JavaScript -->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<!-- DataTables Responsive JavaScript -->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/dataTables.responsive.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#myTable').DataTable({
+            responsive: true,
+            // Other DataTables options and configurations
+        });
+    });
+</script>
